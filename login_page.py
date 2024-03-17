@@ -74,7 +74,7 @@ class login_page:
             messagebox.showerror("Error!", "Please enter your Email Id",parent=self.window)
         else:
             try:
-                connection = pymysql.connect(host='localhost', user='root', password='S1911@gudda', database='college2') #type_your_own_Sql_password_and_database
+                connection = pymysql.connect(host='localhost', user='root', password='TYPE OWN SQL PASSWORD', database='DATABASE') 
                 cur = connection.cursor()
                 cur.execute("select * from student_register where email=%s", self.email_entry.get())
                 row=cur.fetchone()
